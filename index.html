@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Products Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><img src="heading.png" width="400px"></h1>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="FormSubmit(event)" class="formClass">
+                    <div>
+                        <label for="productID">Product ID</label>
+                        <input type="text" name="productID" id="productID">
+                    </div>
+                    <div>
+                        <label for="productName">Product Name</label>
+                        <input type="text" name="productName" id="productName">
+                    </div>
+                    <div>
+                        <label for="quantity">Quantity</label>
+                        <input type="number" name="quantity" id="quantity">
+                    </div>
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price">
+                    </div>
+
+                    <div class="form_button">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+
+            <table class="list" id="dataList">
+                <thead>
+                    <div class="search-container">
+                        <label for="search">Search:</label>
+                        <input type="text" id="search" onkeyup="searchTable()" placeholder="Search by Product ID or Name">
+                    </div>
+                    
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
